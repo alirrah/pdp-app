@@ -1,5 +1,8 @@
 :root {
-  --color-primary: ;
+  --primary-color: #1b2559;
+  --primary-color-dark: #121d33;
+
+  --surface-color: hsl(0, 0%, 100%);
 
   --full-width: 75rem;
   --full-width-padding-inline: calc(max(100% - var(--full-width), 2rem) / 2);
@@ -16,8 +19,8 @@
 
 html {
   color-scheme: light;
-  accent-color: var(--color-primary);
-  caret-color: var(--color-primary);
+  accent-color: var(--primary-color);
+  caret-color: var(--primary-color);
 }
 
 input,
@@ -45,4 +48,5 @@ a {
 
 body {
   font-size: var(--fz-400);
+  font-family: "vazirmatn", sans-serif;
 }
