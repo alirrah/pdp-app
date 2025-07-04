@@ -1,0 +1,153 @@
+header {
+  --border-color: hsla(0, 0%, 89%, 0.85);
+  --button-hover-color: hsl(210, 16%, 90%);
+  --button-active-color: hsl(210, 16%, 80%);
+
+  --padding: 0.5rem 1rem;
+
+  --border-radius: 0.25rem;
+
+  --box-shadow: 0 5px 14px 0 hsla(240, 37%, 12%, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem var(--full-width-padding-inline);
+
+  background-color: var(--surface-color);
+
+  box-shadow: var(--box-shadow);
+
+  a {
+    &.logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        block-size: 3rem;
+        inline-size: 3rem;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    &.login {
+      padding: var(--padding);
+
+      background: linear-gradient(
+        to bottom,
+        var(--primary-color) 0%,
+        var(--primary-color-dark) 100%
+      );
+
+      border-radius: var(--border-radius);
+
+      color: var(--surface-color);
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--padding);
+
+        border-radius: var(--border-radius);
+
+        &.active {
+          background-color: var(--button-active-color);
+        }
+
+        &.login {
+          display: none;
+        }
+
+        &:hover {
+          background-color: var(--button-hover-color);
+        }
+      }
+    }
+  }
+
+  button {
+    display: none;
+    align-content: center;
+    justify-content: center;
+
+    background-color: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    img {
+      inline-size: 1.5rem;
+      block-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    a {
+      &.logo {
+        p {
+          display: block;
+        }
+      }
+
+      &.login {
+        display: none;
+
+        &.show {
+          display: flex;
+        }
+      }
+    }
+
+    nav {
+      display: none;
+      position: absolute;
+      inset-block-start: 4.0625rem;
+      inset-inline: 0;
+
+      border: 1px solid var(--border-color);
+
+      box-shadow: var(--box-shadow);
+
+      &.show {
+        display: block;
+      }
+
+      ul {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        padding: var(--padding);
+
+        background-color: var(--surface-color);
+
+        block-size: 100%;
+
+        a {
+          &.login {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    button {
+      display: flex;
+    }
+  }
+}
