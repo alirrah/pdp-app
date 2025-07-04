@@ -8,7 +8,7 @@
       priority="1"
     />
 
-    <p>نرم افزار توسعه فردی اکسین</p>
+    <p [class.show]="menu?.length === 0">نرم افزار توسعه فردی اکسین</p>
   </a>
 
   <nav *ngIf="menu?.length !== 0" [class.show]="showSideBar">
