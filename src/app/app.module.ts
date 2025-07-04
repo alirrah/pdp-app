@@ -6,9 +6,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { HeaderModule } from './components/header/header.module';
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, CommonModule, AppRoutingModule],
+  imports: [BrowserModule, CommonModule, AppRoutingModule, HeaderModule],
   bootstrap: [AppComponent],
   providers: [provideAnimationsAsync()],
 })
