@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { menuItem } from '../../types/menu-item.type';
+import { menuItem } from './types/menu-item.type';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +9,9 @@ import { menuItem } from '../../types/menu-item.type';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  @Input() public menu?: menuItem[] = [];
   private readonly currentUrl: string = '';
   protected showSideBar: boolean = false;
+  protected menu: menuItem[] = [];
 
   public constructor(private router: Router) {
     this.currentUrl = this.router.url;

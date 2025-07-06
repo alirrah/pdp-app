@@ -5,8 +5,6 @@ header {
 
   --padding: 0.5rem 1rem;
 
-  --border-radius: 0.25rem;
-
   --box-shadow: 0 5px 14px 0 hsla(240, 37%, 12%, 0.05);
 
   display: flex;
@@ -31,6 +29,10 @@ header {
 
       p {
         display: none;
+
+        &.show {
+          display: block;
+        }
       }
     }
 
@@ -90,9 +92,10 @@ header {
 
     cursor: pointer;
 
-    img {
-      block-size: 1.5rem;
-      inline-size: 1.5rem;
+    font-size: 1.75em;
+
+    app-mingcute-menu-line {
+      display: flex;
     }
   }
 }
