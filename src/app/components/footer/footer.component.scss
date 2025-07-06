@@ -30,7 +30,7 @@ footer {
         }
 
         &:has(svg) {
-          color: #1b2559;
+          color: var(--primary-color);
 
           font-size: 1.75em;
         }
@@ -38,31 +38,32 @@ footer {
     }
 
     input {
-      direction: ltr;
-
       padding: 0.25rem 0.5rem;
 
-      border-radius: 0.25rem;
-
-      background-color: #fcfdfe;
+      background-color: hsl(210, 50%, 99%);
 
       border: 1px solid hsl(229, 51%, 92%);
 
-      color: grey;
+      border-radius: var(--border-radius);
+
+      color: hsl(0, 0%, 50%);
+
+      direction: ltr;
 
       &::placeholder {
-        color: #c4c4c4;
+        color: hsl(0, 0%, 77%);
       }
 
       &:focus-within {
-        outline: none;
         border-color: hsl(229, 5%, 66%);
+
+        outline: none;
       }
     }
   }
 }
 
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 992px) {
   footer {
     div {
       flex: 1;
@@ -78,7 +79,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   footer {
     flex-direction: column-reverse;
 
@@ -88,10 +89,6 @@ footer {
       ul {
         justify-content: center;
         gap: 1rem;
-      }
-
-      input {
-        inline-size: 100%;
       }
     }
   }

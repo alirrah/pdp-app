@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { FooterComponent } from './footer.component';
 
@@ -15,6 +16,7 @@ import { MingcuteSocialXFillModule } from '../../../assets/icons/mingcute-social
   exports: [FooterComponent],
   imports: [
     CommonModule,
+    FormsModule,
     MingcuteFacebookFillModule,
     MingcuteInstagramFillModule,
     MingcuteLinkedinFillModule,

@@ -5,8 +5,8 @@
     <ul>
       <li>
         <a href="#" target="_blank" title="فیسبوک">
-          <app-mingcute-facebook-fill
-        /></a>
+          <app-mingcute-facebook-fill />
+        </a>
       </li>
 
       <li>
@@ -17,8 +17,8 @@
 
       <li>
         <a href="#" target="_blank" title="اینستاگرام"
-          ><app-mingcute-instagram-fill
-        /></a>
+          ><app-mingcute-instagram-fill />
+        </a>
       </li>
 
       <li>
@@ -46,11 +46,17 @@
 
     <ul>
       <li><a href="#">Vision</a></li>
+
       <li><a href="#">Mission</a></li>
+
       <li><a href="#">Action</a></li>
+
       <li><a href="#">Dashboard</a></li>
+
       <li><a href="#">Option</a></li>
+
       <li><a href="#">Chat Bot</a></li>
+
       <li><a href="#">Store</a></li>
     </ul>
   </div>
@@ -58,7 +64,7 @@
   <div>
     <p>عضویت در خبرنامه</p>
 
-    <form action="">
+    <form (ngSubmit)="formSubmitHandler()">
       <input
         name="email"
         autocomplete="on"
