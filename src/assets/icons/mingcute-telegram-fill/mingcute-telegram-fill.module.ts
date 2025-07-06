@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MingcuteTelegramFillComponent } from './mingcute-telegram-fill.component';
 
 @NgModule({
