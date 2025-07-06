@@ -94,9 +94,10 @@ header {
 
     cursor: pointer;
 
-    img {
-      block-size: 1.5rem;
-      inline-size: 1.5rem;
+    font-size: 1.75em;
+
+    app-mingcute-menu-line {
+      display: flex;
     }
   }
 }

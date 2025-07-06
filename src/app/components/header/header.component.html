@@ -8,10 +8,10 @@
       priority="1"
     />
 
-    <p [class.show]="menu?.length === 0">نرم افزار توسعه فردی اکسین</p>
+    <p [class.show]="menu.length === 0">نرم افزار توسعه فردی اکسین</p>
   </a>
 
-  <nav *ngIf="menu?.length !== 0" [class.show]="showSideBar">
+  <nav *ngIf="menu.length !== 0" [class.show]="showSideBar">
     <ul>
       <li *ngFor="let item of menu; index as _">
         <a [routerLink]="item.link" [class.active]="isActiveLink(item.link)">{{
@@ -25,22 +25,17 @@
     </ul>
   </nav>
 
-  <a routerLink="/login" class="login" [class.show]="menu?.length === 0"
+  <a routerLink="/login" class="login" [class.show]="menu.length === 0"
     >ورود به برنامه</a
   >
 
   <button
-    *ngIf="menu?.length !== 0"
+    *ngIf="menu.length !== 0"
     (click)="toggleMenu()"
     aria-label="Toggle menu"
     [attr.aria-expanded]="showSideBar"
+    title="منو"
   >
-    <img
-      ngSrc="assets/icons/MingcuteMenuLine.svg"
-      alt="آیکن منو"
-      width="24"
-      height="24"
-      priority="1"
-    />
+    <app-mingcute-menu-line />
   </button>
 </header>
