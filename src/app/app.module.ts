@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from './components/footer/footer.module';
+import { LandingPageModule } from './pages/landing-page/landing-page.module';
+import { NotFoundPageModule } from './pages/not-found-page/not-found-page.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,8 @@ import { FooterModule } from './components/footer/footer.module';
     AppRoutingModule,
     HeaderModule,
     FooterModule,
+    LandingPageModule,
+    NotFoundPageModule,
   ],
   bootstrap: [AppComponent],
   providers: [provideAnimationsAsync()],

@@ -4,4 +4,8 @@
 
   block-size: 100vh;
   block-size: 100dvh;
+
+  router-outlet {
+    display: none;
+  }
 }
