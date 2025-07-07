@@ -11,7 +11,7 @@ import { menuItem } from './types/menu-item.type';
 export class HeaderComponent {
   private readonly currentUrl: string = '';
   protected showSideBar: boolean = false;
-  protected menu: menuItem[] = [];
+  protected menu: menuItem[] = [{ title: 'dsfdfsdf', link: '/' }];
 
   public constructor(private router: Router) {
     this.currentUrl = this.router.url;

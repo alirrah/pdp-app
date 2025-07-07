@@ -2,14 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MingcuteFacebookFillModule } from '../../../assets/icons/mingcute-facebook-fill/mingcute-facebook-fill.module';
-import { MingcuteInstagramFillModule } from '../../../assets/icons/mingcute-instagram-fill/mingcute-instagram-fill.module';
-import { MingcuteLinkedinFillModule } from '../../../assets/icons/mingcute-linkedin-fill/mingcute-linkedin-fill.module';
-import { MingcuteYoutubeFillModule } from '../../../assets/icons/mingcute-youtube-fill/mingcute-youtube-fill.module';
-import { MingcuteTelegramFillModule } from '../../../assets/icons/mingcute-telegram-fill/mingcute-telegram-fill.module';
-import { MingcuteSocialXFillModule } from '../../../assets/icons/mingcute-social-xfill/mingcute-social-xfill.module';
-
 import { FooterComponent } from './footer.component';
+import { MingcuteFacebookFillComponent } from '../../../assets/icons/mingcute-facebook-fill.component';
+import { MingcuteTelegramFillComponent } from '../../../assets/icons/mingcute-telegram-fill.component';
+import { MingcuteInstagramFillComponent } from '../../../assets/icons/mingcute-instagram-fill.component';
+import { MingcuteLinkedinFillComponent } from '../../../assets/icons/mingcute-linkedin-fill.component';
+import { MingcuteSocialXFillComponent } from '../../../assets/icons/mingcute-social-xfill.component';
+import { MingcuteYoutubeFillComponent } from '../../../assets/icons/mingcute-youtube-fill.component';
 
 @NgModule({
   declarations: [FooterComponent],
@@ -17,12 +16,12 @@ import { FooterComponent } from './footer.component';
   imports: [
     CommonModule,
     FormsModule,
-    MingcuteFacebookFillModule,
-    MingcuteInstagramFillModule,
-    MingcuteLinkedinFillModule,
-    MingcuteYoutubeFillModule,
-    MingcuteTelegramFillModule,
-    MingcuteSocialXFillModule,
+    MingcuteFacebookFillComponent,
+    MingcuteTelegramFillComponent,
+    MingcuteInstagramFillComponent,
+    MingcuteLinkedinFillComponent,
+    MingcuteSocialXFillComponent,
+    MingcuteYoutubeFillComponent,
   ],
 })
 export class FooterModule {}
