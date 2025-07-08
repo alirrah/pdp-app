@@ -8,13 +8,13 @@
       priority="1"
     />
 
-    <p [class.show]="menu.length === 0">نرم افزار توسعه فردی اکسین</p>
+    <p [class.show]="menuItems.length === 0">نرم افزار توسعه فردی اکسین</p>
   </a>
 
-  <nav *ngIf="menu.length !== 0" [class.show]="showSideBar">
+  <nav *ngIf="menuItems.length !== 0" [class.show]="showSideBar">
     <ul>
-      <li *ngFor="let item of menu; index as _">
-        <a [routerLink]="item.link" [class.active]="isActiveLink(item.link)">{{
+      <li *ngFor="let item of menuItems">
+        <a [href]="item.link" [class.active]="isActiveLink(item.link)">{{
           item.title
         }}</a>
       </li>
@@ -25,17 +25,17 @@
     </ul>
   </nav>
 
-  <a routerLink="/login" class="login" [class.show]="menu.length === 0"
+  <a routerLink="/login" class="login" [class.show]="menuItems.length === 0"
     >ورود به برنامه</a
   >
 
   <button
-    *ngIf="menu.length !== 0"
+    *ngIf="menuItems.length !== 0"
     (click)="toggleMenu()"
     aria-label="Toggle menu"
     [attr.aria-expanded]="showSideBar"
     title="منو"
   >
-    <app-mingcute-menu-line />
+    <icon-mingcute-menu-line />
   </button>
 </header>

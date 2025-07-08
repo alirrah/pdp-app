@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { menuItem } from './types/menu-item.type';
+import { Link } from '../../types/link.type';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +11,13 @@ import { menuItem } from './types/menu-item.type';
 export class HeaderComponent {
   private readonly currentUrl: string = '';
   protected showSideBar: boolean = false;
-  protected menu: menuItem[] = [];
+  protected menuItems: Pick<Link, 'title' | 'link'>[] = [
+    { title: 'اشتراک ویژه', link: '#' },
+    { title: 'افزونه‌ها', link: '#' },
+    { title: 'آموزش', link: '#' },
+    { title: 'درباره‌ما', link: '#' },
+    { title: 'درخواست مشاوره', link: '#' },
+  ];
 
   public constructor(private router: Router) {
     this.currentUrl = this.router.url;
