@@ -3,39 +3,9 @@
     <p>راه‌های ارتباطی</p>
 
     <ul>
-      <li>
-        <a href="#" target="_blank" title="فیسبوک">
-          <icon-mingcute-facebook-fill />
-        </a>
-      </li>
-
-      <li>
-        <a href="#" target="_blank" title="تلگرام">
-          <icon-mingcute-telegram-fill />
-        </a>
-      </li>
-
-      <li>
-        <a href="#" target="_blank" title="اینستاگرام">
-          <icon-mingcute-instagram-fill />
-        </a>
-      </li>
-
-      <li>
-        <a href="#" target="_blank" title="لینکدین">
-          <icon-mingcute-linkedin-fill />
-        </a>
-      </li>
-
-      <li>
-        <a href="#" target="_blank" title="ایکس (توییتر سابق)">
-          <icon-mingcute-social-xfill />
-        </a>
-      </li>
-
-      <li>
-        <a href="#" target="_blank" title="یوتیوب">
-          <icon-mingcute-youtube-fill />
+      <li *ngFor="let item of communicationWays">
+        <a [href]="item.link" target="_blank" [title]="item.title">
+          <ng-container *ngComponentOutlet="item.icon"></ng-container>
         </a>
       </li>
     </ul>
@@ -45,19 +15,9 @@
     <p>دسترسی‌های سریع</p>
 
     <ul>
-      <li><a href="#">Vision</a></li>
-
-      <li><a href="#">Mission</a></li>
-
-      <li><a href="#">Action</a></li>
-
-      <li><a href="#">Dashboard</a></li>
-
-      <li><a href="#">Option</a></li>
-
-      <li><a href="#">Chat Bot</a></li>
-
-      <li><a href="#">Store</a></li>
+      <li *ngFor="let item of quickAccesses">
+        <a [href]="item.link">{{ item.title }}</a>
+      </li>
     </ul>
   </div>
 
